@@ -102,7 +102,17 @@ export default class ScrollPicker extends React.Component {
 
     renderItem(data, index) {
         const isSelected = index === this.state.selectedIndex;
-        const { fontSize, lineHeight } = this.props;
+        const { fontSize, lineHeight, displayField } = this.props;
+
+        // Render a custom property of an object
+        let display = data;
+        if (
+            displayField !== undefined &&
+            data.hasOwnProperty(displayField) === true
+        ) {
+            display = data[displayField];
+        }
+
         const item = (
             <ItemText
                 fontSize={fontSize}
@@ -112,7 +122,7 @@ export default class ScrollPicker extends React.Component {
                         ? this.props.activeItemColor
                         : this.props.itemColor
                 }>
-                {data}
+                {display}
             </ItemText>
         );
 
@@ -204,6 +214,7 @@ export default class ScrollPicker extends React.Component {
 ScrollPicker.propTypes = {
     style: PropTypes.object,
     dataSource: PropTypes.array,
+    displayField: PropTypes.string,
     fontSize: PropTypes.number,
     lineHeight: PropTypes.number,
     selectedIndex: PropTypes.number,
