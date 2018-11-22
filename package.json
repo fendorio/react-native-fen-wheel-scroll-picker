@@ -15,7 +15,7 @@
         "react-native",
         "react-native-picker"
     ],
-    "author": "yasemin",
+    "author": "Lee Cameron Brindley",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/yasemincidem/react-native-picker-scrollview/issues"
