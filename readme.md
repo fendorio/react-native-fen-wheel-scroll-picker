@@ -1,6 +1,6 @@
 ## Changes since fork
 
--   Added 'fontSize' prop, to allow further customisation of the text element rendered inside each option.
+-   Added 'fontSize' and 'lineHeight' prop, to allow further customisation of the text element rendered inside each option.
 
 ## react-native-wheel-scroll-picker
 

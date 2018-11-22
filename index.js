@@ -30,7 +30,7 @@ export const SelectedItem = styled.View`
 export const ItemText = styled.Text`
     color: ${(props) => props.color};
     font-size: ${(props) => props.fontSize}px;
-    line-height: 26px;
+    line-height: ${(props) => props.lineHeight}px;
     text-align: center;
 `;
 const deviceWidth = Dimensions.get("window").width;
@@ -102,10 +102,11 @@ export default class ScrollPicker extends React.Component {
 
     renderItem(data, index) {
         const isSelected = index === this.state.selectedIndex;
-        const { fontSize } = this.props;
+        const { fontSize, lineHeight } = this.props;
         const item = (
             <ItemText
                 fontSize={fontSize}
+                lineHeight={lineHeight}
                 color={
                     isSelected
                         ? this.props.activeItemColor
@@ -204,6 +205,7 @@ ScrollPicker.propTypes = {
     style: PropTypes.object,
     dataSource: PropTypes.array,
     fontSize: PropTypes.number,
+    lineHeight: PropTypes.number,
     selectedIndex: PropTypes.number,
     onValueChange: PropTypes.func,
     renderItem: PropTypes.func,
@@ -222,6 +224,7 @@ ScrollPicker.propTypes = {
 ScrollPicker.defaultProps = {
     dataSource: [1, 2, 3],
     fontSize: 20,
+    lineHeight: 26,
     itemHeight: 60,
     wrapperBackground: "#FFFFFF",
     wrapperHeight: 180,
