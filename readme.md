@@ -12,12 +12,12 @@ a pure js picker, each option item customizable
 ### usage
 
 ```shell
-npm install react-native-wheel-scroll-picker --save
+npm install react-native-fen-wheel-scroll-picker --save
 ```
 
 ```jsx
 import React, { Component } from "react";
-import ScrollPicker from "react-native-wheel-scroll-picker";
+import ScrollPicker from "react-native-fen-wheel-scroll-picker";
 
 export default class SimpleExample extends Component {
     render() {
