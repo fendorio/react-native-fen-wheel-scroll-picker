@@ -3,6 +3,8 @@
 -   Added 'displayField' property, where you can pass in an object key (single level) to render, this is useful if you want to pass in an array of objects, and want to render one of the fields.
 -   Added 'fontSize' and 'lineHeight' prop, to allow further customisation of the text element rendered inside each option.
 
+This has not been tested since 2019.
+
 ## react-native-wheel-scroll-picker
 
 a pure js picker, each option item customizable
