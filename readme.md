@@ -11,7 +11,7 @@ a pure js picker, each option item customizable
 
 ![example](./demo/test.gif)
 
-### usage
+### Usage example.
 
 ```shell
 npm install react-native-fen-wheel-scroll-picker --save
